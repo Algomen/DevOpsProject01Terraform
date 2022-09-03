@@ -22,6 +22,10 @@ For this project, you will write a Packer template and a Terraform template to d
 3. Assign the policy to your Azure subscription to deny creation of resources without tags. For that, type the following commands in the CLI:
   > az policy definition create --name tagging-policy --rules policy2.json
   > az policy assignment create --policy tagging-policy
+  
+  You should see something like this:
+  <img width="626" alt="Policy assigned" src="https://user-images.githubusercontent.com/62774791/188282105-46e031be-8695-4515-ab38-b8ba455b714d.png">
+
 
 4. Import the image template to Azure. For that, type the following commands in the CLI:
   > packer build server-packer-template.json
@@ -30,6 +34,9 @@ For this project, you will write a Packer template and a Terraform template to d
   > terraform init
   > terraform plan
   > terraform apply
+
+You should see something like this:
+![Output terraform apply](https://user-images.githubusercontent.com/62774791/188282118-3e9ceecb-894f-4c3d-948e-723a2719187f.png)
 
 
 ### Output
